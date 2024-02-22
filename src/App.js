@@ -3,8 +3,9 @@ import './App.css';
 import { Outlet, createBrowserRouter } from "react-router-dom";
 import ShowProd from './components/ShowProd';
 import AddProd from './components/AddProd';
-import UpdProd from './components/UpdProd';
 import NavBar from './components/NavBar';
+import DetailPage from './components/DetailPage';
+import UpdateProd from './components/UpdateProd';
 
 function App() {
   return (
@@ -29,8 +30,11 @@ export const router = createBrowserRouter([
         element: <AddProd/>,
       },
       {
-        path: "/update",
-        element: <UpdProd/>,}
+        path: "/update/:id",
+        element: <UpdateProd/>},
+        {
+          path: "/details/:id",
+          element: <DetailPage/>,}
       ]}])
 
 export default App;

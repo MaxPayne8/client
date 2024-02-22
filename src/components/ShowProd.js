@@ -25,7 +25,7 @@ const ShowProd = () => {
         <h1 className='mb-10'>All Products</h1>
         <div className='flex justify-evenly'>
         {prod.map((e) =>
-            <ProdDet key={e.id} category={e.category} desc ={e.description} image={e.image} name={e.name} price={e.price}/>
+            <ProdDet key={e.id} id={e.id} category={e.category} desc ={e.description} image={e.image} name={e.name} price={e.price}/>
         )}
         </div>
         
